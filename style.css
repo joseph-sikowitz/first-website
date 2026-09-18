@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* navbar */
+.navbar {
+  background-color: #333;
+  padding: 15px;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.navbar .logo {
+  color: white;
+  display: inline;
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+/* main content */
+.main {
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #333;
+  margin-top: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* part 3 grid - no CSS here on purpose, this is just the paragraph styles above it */
+
+/* part 4 box model */
+.row {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.box {
+  width: 120px;
+  height: 80px;
+  background-color: lightblue;
+  border: 2px solid blue;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.b1 { border-width: 0px; }
+.b2 { border-width: 5px; }
+.b3 { border-width: 10px; }
+
+.graybg {
+  background-color: #eee;
+}
+
+.m1 { margin: 0px; }
+.m2 { margin: 5px; }
+.m3 { margin: 10px; }
+
+.p1 { padding: 0px; }
+.p2 { padding: 5px; }
+.p3 { padding: 10px; }
+
+/* part 6 positioning */
+.posbox {
+  position: relative;
+  border: 1px solid #999;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.rel {
+  position: relative;
+  top: 5px;
+  left: 10px;
+  background-color: lightyellow;
+}
+
+.abs {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: orange;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.scrollbox {
+  height: 100px;
+  overflow-y: scroll;
+  border: 1px solid #999;
+  padding: 0 10px;
+}
+
+.stickyhead {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  color: white;
+  padding: 5px;
+}
+
+.fixedbtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+/* footer - relative on body up top + absolute here keeps it stuck to the bottom */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My HTML CSS Homework</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <!-- navbar -->
+  <div class="navbar">
+    <p class="logo">My Website</p>
+    <a href="#tags">Tags</a>
+    <a href="#seo">SEO</a>
+    <a href="#grid">Grid</a>
+    <a href="#boxmodel">Box Model</a>
+    <a href="#fontsize">Font Size</a>
+    <a href="#position">Position</a>
+  </div>
+
+  <!-- main content -->
+  <div class="main">
+    <h1>HTML + CSS Practice</h1>
+    <p>This is my homework page for this week. I did all 6 parts below.</p>
+
+    <!-- part 1 -->
+    <h2 id="tags">1. Structure + my top 10 tags</h2>
+    <p>My page has a navbar at the top, a main part with headers and sections, and a footer at the bottom.
+      Here are the 10 HTML tags I think are the most useful (at least for now, since I'm still learning):</p>
+    <ol>
+      <li>div - basically a box you can put anything in, I use it everywhere</li>
+      <li>span - like a div but doesn't go to a new line</li>
+      <li>section - groups content together, kind of like div but more "meaningful"</li>
+      <li>nav - for navigation links like my navbar up top</li>
+      <li>ul and li - for lists (I used this one for this exact list lol)</li>
+      <li>a - for links, obviously very important</li>
+      <li>img - to put pictures on the page (need to remember alt text)</li>
+      <li>h1, h2, h3 - headings, to organize the page</li>
+      <li>button - for anything clickable</li>
+      <li>p - paragraphs, for normal text</li>
+    </ol>
+
+    <!-- part 2 -->
+    <h2 id="seo">2. SEO tags</h2>
+    <p>I looked up SEO and found these tags matter the most:</p>
+    <ul>
+      <li>&lt;title&gt; - shows up as the clickable headline on Google</li>
+      <li>&lt;meta name="description"&gt; - the little summary under the title on Google</li>
+      <li>&lt;h1&gt; - should only be used once per page</li>
+      <li>&lt;h2&gt; and &lt;h3&gt; - help organize the page so Google understands it better</li>
+      <li>alt text on images - helps Google know what the image is</li>
+      <li>&lt;meta name="viewport"&gt; - tells Google your site works on mobile</li>
+    </ul>
+
+    <!-- part 3 -->
+    <h2 id="grid">3. 3x3 grid, no CSS</h2>
+    <p>This part was tricky because we can't use CSS or a table. I used divs for rows (they go on their own line)
+      and spans inside for the columns (they stay on the same line since span is inline). No CSS classes are used
+      on this part at all, it's just the default way the browser shows these tags.</p>
+    <div>
+      <div>Box 1 <span>Box 2</span> <span>Box 3</span></div>
+      <div>Box 4 <span>Box 5</span> <span>Box 6</span></div>
+      <div>Box 7 <span>Box 8</span> <span>Box 9</span></div>
+    </div>
+    <p><i>(it kind of looks like a grid but it's not really lining up into columns since there's no CSS controlling
+      the width - it's just luck that the text is short.)</i></p>
+
+    <!-- part 4 -->
+    <h2 id="boxmodel">4. Box model</h2>
+    <p>Made 3 rows, one for border, one for margin, one for padding. Each row has 3 boxes with different values
+      (0px, 5px, 10px) so you can see what changes.</p>
+
+    <h3>Border</h3>
+    <div class="row">
+      <div class="box b1">border 0px</div>
+      <div class="box b2">border 5px</div>
+      <div class="box b3">border 10px</div>
+    </div>
+
+    <h3>Margin</h3>
+    <div class="row graybg">
+      <div class="box m1">margin 0px</div>
+      <div class="box m2">margin 5px</div>
+      <div class="box m3">margin 10px</div>
+    </div>
+
+    <h3>Padding</h3>
+    <div class="row">
+      <div class="box p1">padding 0px</div>
+      <div class="box p2">padding 5px</div>
+      <div class="box p3">padding 10px</div>
+    </div>
+
+    <!-- part 5 -->
+    <h2 id="fontsize">5. Font sizes (inline style)</h2>
+    <ul>
+      <li style="font-size: 12px;">Reading is fundamental - 12px, this is px which is a fixed size, good for small print like a copyright notice</li>
+      <li style="font-size: 24px;">Reading is fundamental - 24px, also fixed size px, good for something like a button text that should always be the same</li>
+      <li style="font-size: 1.5em;">Reading is fundamental - 1.5em, this is relative to the parent element's font size</li>
+      <li style="font-size: 2rem;">Reading is fundamental - 2rem, relative to the root html font size, good for headings</li>
+      <li style="font-size: 3vw;">Reading is fundamental - 3vw, relative to the browser width, so it changes when you resize the window</li>
+      <li style="font-size: 120%;">Reading is fundamental - 120%, relative to parent font-size like em but as a percent</li>
+    </ul>
+
+    <!-- part 6 -->
+    <h2 id="position">6. Positioning</h2>
+    <p>I used relative, absolute, fixed, and sticky. I explain each one below.</p>
+
+    <div class="posbox">
+      <p class="rel">this text has position: relative, it's moved a little bit from where it normally would be</p>
+      <span class="abs">absolute box</span>
+      <p>sticky example, scroll the box below:</p>
+      <div class="scrollbox">
+        <div class="stickyhead">I'm sticky</div>
+        <p>scroll down...</p>
+        <p>keep scrolling...</p>
+        <p>see how the header stayed at the top? that's position sticky</p>
+      </div>
+    </div>
+    <button class="fixedbtn" onclick="window.scrollTo(0,0)">back to top (fixed)</button>
+
+    <p>I used position relative and absolute together to make the footer stay at the bottom of the page
+      even when there's not much content (this is a common trick I found online).</p>
+
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <p>made for my web dev class - HTML/CSS homework</p>
+  </div>
+
+</body>
+</html>
