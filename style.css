@@ -36,6 +36,8 @@ h1 {
   color: #333;
 }
 
+<!-- I like how you created the solid border at the bottom of the h2 tags with CSS. It makes the page layout
+     flow well. -->
 h2 {
   color: #333;
   margin-top: 40px;
